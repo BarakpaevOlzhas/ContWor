@@ -1,0 +1,27 @@
+﻿<Window x:Class="DataGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="dataG" HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="DataGrid_SelectionChanged" ItemsSource="{Binding TestBinding}">
+            <DataGrid.Items>
+            </DataGrid.Items>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Соотношение" Width="150"
+                             Binding="{Binding Path=Sootnowenie}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Первая валюта" Width="150"  
+                             Binding="{Binding Path=Name_Rus}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Курс" Width="100"  
+                             Binding="{Binding Path=Kurs}"></DataGridTextColumn>
+                <DataGridTextColumn Header="К валюте" Width="150"  
+                             Binding="{Binding Path=Kod}"></DataGridTextColumn>                
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Window>
